@@ -1,0 +1,50 @@
+body {
+  //color: white;
+}
+
+.Header {
+  position: relative;
+  background: white;
+  height: 100px;
+    a {
+      color: black;
+    }
+}
+
+nav {
+  padding: 10px 87px 10px 0;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+li {
+  margin-right: 28px;
+  color: #707070;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+li:last-child {
+  padding: 0;
+}
+
+button {
+  background: #5AC8FA;
+  border-radius: 23px;
+  border: 0 solid #5AC8FA;
+  width: 156px;
+  padding: 10px 0;
+  color: white;
+}
+
+.Logo {
+  background: black;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+

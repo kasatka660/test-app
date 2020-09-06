@@ -1,0 +1,29 @@
+.SignInForm {
+  box-shadow: 0 3px 6px #00000029;
+  border: 1px solid #F2F2F2;
+  background: #ffffff;
+  color: black;
+  padding: 23px 54px 53px 54px;
+}
+
+.SigInFormWrapper {
+  width: 510px;
+  animation: slidein;
+  animation-duration: 1s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes slidein {
+  from {
+    transform: translate(-50%, -10%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(-50%, -50%);
+    opacity: 1;
+  }
+}

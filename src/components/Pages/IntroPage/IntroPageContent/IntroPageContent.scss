@@ -1,0 +1,22 @@
+.IntroPageContent {
+  position: relative;
+  background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(90,200,250,1) 100%) no-repeat;
+  text-align: center;
+  margin: 0 100px;
+}
+
+.IntroPageText {
+  position: absolute;
+  font-size: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 370px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.AppleLogo {
+  margin-top: 196px;
+}
