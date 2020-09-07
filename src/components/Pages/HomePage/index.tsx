@@ -4,10 +4,10 @@ import HomePageContent from "./HomePageContent";
 
 const HomePage: React.FC = () => {
   return (
-    <div>
-      <Header />
+    <>
+      <Header displayNav={true} />
       <HomePageContent />
-    </div>
+    </>
   );
 };
 

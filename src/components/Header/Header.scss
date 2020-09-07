@@ -1,70 +1,51 @@
 .Header {
   background: black;
   animation: headerSlideIn;
-  animation-duration: 3s;
-  nav {
+  animation-duration: 2s;
+  .Navigation {
     display: none;
   }
   .Logo {
    margin: 0 auto;
    position: relative;
     animation: logoSlideIn;
-    animation-duration: 3s;
+    animation-duration: 2s;
   }
-}
-
-
-
-
-@keyframes headerSlideIn {
-  from { height: 10px; }
-  50% {height: 10px}
-  to   { height: 100px; }
-}
-
-@keyframes logoSlideIn {
-  from { top: -150px; }
-  50% {top: -100px}
-  to   { top: 0; }
 }
 
 .HeaderWithNav {
   position: relative;
   background: white;
   height: 100px;
-    a {
-      color: black;
-    }
 }
 
-nav {
+.Navigation {
   padding: 10px 87px 10px 0;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
-ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-}
-
-li {
+.NavItem {
   margin-right: 54px;
-  color: #707070;
-  font-size: 20px;
   padding: 10px 0;
+  font-size: 20px;
 }
 
-li:last-child {
-  padding: 0;
+.NavLink {
+  color: #707070;
 }
 
-button {
+.NavBtn {
   background: #5AC8FA;
   border-radius: 23px;
   border: 0 solid #5AC8FA;
-  width: 156px;
-  padding: 10px 0;
-  color: white;
+  padding: 10px 30px;
+  .NavLink {
+    color: white;
+  }
 }
 
 .Logo {
@@ -82,3 +63,15 @@ button {
   transform: translate(-50%, -50%);
 }
 
+
+@keyframes headerSlideIn {
+  from { height: 10px; }
+  50% {height: 10px}
+  to   { height: 100px; }
+}
+
+@keyframes logoSlideIn {
+  from { top: -150px; }
+  50% {top: -100px}
+  to   { top: 0; }
+}

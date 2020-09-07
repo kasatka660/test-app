@@ -1,7 +1,7 @@
-.App {
+.AppGradientWrapper {
+  background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(90,200,250,1) 100%) no-repeat;
+  background-size: 100% 555px;
   min-height: 100vh;
   overflow: hidden;
-  //background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(90,200,250,1) 100%) no-repeat;
-  background-size: 100% 555px;
 }
 

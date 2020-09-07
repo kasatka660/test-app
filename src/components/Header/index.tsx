@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.scss";
 import { ReactComponent as AppleLogo } from "../../assets/images/logo/Apple_Logo-small.svg";
+import { Link } from "react-router-dom";
 
 const Header: React.FC<{ displayNav?: boolean }> = ({ displayNav }) => {
   return (
@@ -8,19 +9,21 @@ const Header: React.FC<{ displayNav?: boolean }> = ({ displayNav }) => {
       <div className="Logo">
         <AppleLogo className="apple" />
       </div>
-      <nav>
+      <nav className="Navigation">
         <ul>
-          <li>
-            <a>iPhone</a>
+          <li className="NavItem">
+            <Link className="NavLink" to={"/home/iphone"}>
+              iPhone
+            </Link>
           </li>
-          <li>
-            <a>MacBook Pro</a>
+          <li className="NavItem">
+            <a className="NavLink">MacBook Pro</a>
           </li>
-          <li>
-            <a>Watch</a>
+          <li className="NavItem">
+            <a className="NavLink">Watch</a>
           </li>
-          <li>
-            <button>Notify me</button>
+          <li className="NavItem NavBtn">
+            <a className="NavLink">Notify me</a>
           </li>
         </ul>
       </nav>

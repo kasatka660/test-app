@@ -3,8 +3,9 @@
   background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(90,200,250,1) 100%) no-repeat;
   text-align: center;
   margin: 0 100px;
-  animation: pageSqueeze;
-  animation-duration: 3s;
+  animation: pageSqueeze ease-out;
+  animation-duration: 2s;
+  cursor: pointer;
 }
 
 .IntroPageText {
@@ -13,19 +14,21 @@
   left: 50%;
   transform: translateX(-50%);
   top: 370px;
+  animation: textSlide ease-out;
+  animation-duration: 2s;
 }
 
-h2 {
+.YearInfo {
   font-size: 30px;
+  animation: odometerSlide ease-out;
+  animation-duration: 2s;
 }
 
 .AppleLogo {
   margin-top: 196px;
-  animation: logoExpansion;
-  animation-duration: 3s;
-  animation-timing-function: ease-in;
+  animation: logoExpansion ease-out;
+  animation-duration: 2s;
 }
-
 
 @keyframes pageSqueeze {
   from {margin: 0  0}
@@ -33,9 +36,22 @@ h2 {
   to {margin: 0 100px}
 }
 
-
 @keyframes logoExpansion {
-  from {width: 0; opacity: 0.2}
-  50% {width: 0; opacity: 0.2}
+  from {width: 0; opacity: 0}
+  50% {width: 0; opacity: 0}
   to {width: 100%; opacity: 1}
 }
+
+@keyframes textSlide {
+  from {font-size: 12px; top: 600px; opacity: 0}
+  50% {font-size: 12px; top: 600px; opacity: 0}
+  to {font-size: 25px; top: 370px}
+}
+
+@keyframes odometerSlide {
+  from {opacity: 0}
+  50% {opacity: 0}
+  to {opacity: 1}
+}
+
+

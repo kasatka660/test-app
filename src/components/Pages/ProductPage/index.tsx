@@ -5,7 +5,7 @@ import ProductPageContent from "./ProductPageContent";
 const ProductPage: React.FC = () => {
   return (
     <div>
-      <Header />
+      <Header displayNav={true} />
       <ProductPageContent />
     </div>
   );

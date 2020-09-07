@@ -2,6 +2,7 @@ import * as React from "react";
 import "./SignUp.scss";
 import { Formik } from "formik";
 import ProgressIndicator from "./../../shared/ProgressIndicator";
+import { Link } from "react-router-dom";
 
 interface SignUpFormValues {
   fullName?: string;
@@ -108,7 +109,10 @@ const SignUp: React.FC = () => {
         </Formik>
       </div>
       <p>
-        Already registered? <a>Sign in</a>
+        Already registered?{" "}
+        <Link className="TextStandardSize" to="/signin">
+          Sign in
+        </Link>
       </p>
     </div>
   );

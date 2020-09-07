@@ -1,6 +1,10 @@
 import * as React from "react";
 import "./SignIn.scss";
 import { Formik } from "formik";
+import { Link } from "react-router-dom";
+import auth from "../../../utils/auth";
+import { useState } from "react";
+import { Redirect } from "react-router-dom";
 
 interface SignInFormValues {
   email?: string;
@@ -9,6 +13,7 @@ interface SignInFormValues {
 
 const SignIn: React.FC = () => {
   const initialValues: SignInFormValues = { email: "", password: "" };
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   return (
     <div className="SigInFormWrapper">
@@ -29,7 +34,8 @@ const SignIn: React.FC = () => {
           }}
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
+              auth.authenticate();
+              setIsSubmitted(true);
               setSubmitting(false);
             }, 400);
           }}
@@ -44,6 +50,7 @@ const SignIn: React.FC = () => {
             isSubmitting,
           }) => (
             <form onSubmit={handleSubmit}>
+              {isSubmitted && <Redirect to={"/"} />}
               <div className="FormGroup">
                 <label htmlFor="email">Email</label>
                 <input
@@ -86,7 +93,10 @@ const SignIn: React.FC = () => {
         </Formik>
       </div>
       <p className="TextRight">
-        Not registered? <a>Sign up</a>
+        Not registered?{" "}
+        <Link className="TextStandardSize" to="/signup">
+          Sign up
+        </Link>
       </p>
     </div>
   );

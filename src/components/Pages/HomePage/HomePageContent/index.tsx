@@ -4,6 +4,7 @@ import { ReactComponent as AppleLogo } from "../../../../assets/images/logo/Appl
 import { ReactComponent as IphoneIcon } from "../../../../assets/images/icons/Iphone_Icon.svg";
 import { ReactComponent as AppleWatchIcon } from "../../../../assets/images/icons/Apple_Watch_Icon.svg";
 import { ReactComponent as MacIcon } from "../../../../assets/images/icons/Mac_Icon.svg";
+import { Link } from "react-router-dom";
 
 const HomePageContent: React.FC = () => {
   return (
@@ -14,9 +15,9 @@ const HomePageContent: React.FC = () => {
         <a>See our products</a>
       </p>
       <div className="ProductIcons">
-        <a>
+        <Link to={"/home/iphone"}>
           <IphoneIcon />
-        </a>
+        </Link>
         <a>
           <MacIcon />
         </a>
