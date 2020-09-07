@@ -5,7 +5,7 @@ import IntroPageContent from "./IntroPageContent";
 const IntroPage: React.FC = () => {
   return (
     <div>
-      <Header />
+      <Header displayNav={false} />
       <IntroPageContent />
     </div>
   );

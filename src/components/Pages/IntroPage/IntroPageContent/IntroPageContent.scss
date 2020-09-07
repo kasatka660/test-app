@@ -3,6 +3,8 @@
   background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(90,200,250,1) 100%) no-repeat;
   text-align: center;
   margin: 0 100px;
+  animation: pageSqueeze;
+  animation-duration: 3s;
 }
 
 .IntroPageText {
@@ -19,4 +21,21 @@ h2 {
 
 .AppleLogo {
   margin-top: 196px;
+  animation: logoExpansion;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+
+
+@keyframes pageSqueeze {
+  from {margin: 0  0}
+  50% {margin: 0 0}
+  to {margin: 0 100px}
+}
+
+
+@keyframes logoExpansion {
+  from {width: 0; opacity: 0.2}
+  50% {width: 0; opacity: 0.2}
+  to {width: 100%; opacity: 1}
 }

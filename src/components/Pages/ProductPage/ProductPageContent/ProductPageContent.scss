@@ -1,0 +1,90 @@
+.ProductPageContent {
+  margin-left: 102px;
+}
+
+
+.ProductInfoBlock {
+  background: transparent linear-gradient(90deg, #F2F2F2 0%, #FFFFFF00 100%) 0 0 no-repeat;
+  padding: 76px;
+  margin-bottom: 50px;
+}
+
+.ProductTitle {
+  font-size: 100px;
+  margin-top: 0;
+}
+
+.ProductType {
+  font-size: 32px;
+  color: #FF3B30;
+}
+
+.AdditionalText{
+  font-size: 25px;
+  line-height: 35px;
+  color: #999999;
+}
+
+.AdditionalInfo {
+  color: #FF3B30;
+  font-size: 14px;
+}
+
+.PriceBlock {
+  padding: 76px;
+  display: inline-block;
+  margin-right: 355px;
+}
+
+.ProductPrice {
+  font-size: 50px;
+  font-weight: bold;
+  color: #CCCCCC;
+  margin: 0;
+}
+
+.RedText {
+  font-size: 20px;
+  color: #FF3B30;
+  font-weight: bold;
+}
+
+.ProductOptions {
+  display: inline-block;
+}
+
+.RedLine {
+  background: #FF3B30;
+  width: 100px;
+  height: 9px;
+  display: inline-block;
+}
+
+.WhiteLine {
+  background: #F2F2F2;
+  width: 100px;
+  height: 9px;
+  display: inline-block;
+}
+
+.ProductBlock {
+  position: absolute;
+  right: 280px;
+  top: 200px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.ProductSwitcherBlock {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 54px;
+  text-align: center;
+  top: 50%;
+    a {
+    margin-bottom: 36px;
+  }
+}

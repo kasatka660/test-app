@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as AppleLogo } from "../../../../assets/images/Apple_Logo.svg";
+import { ReactComponent as AppleLogo } from "../../../../assets/images/logo/Apple_Logo.svg";
 import "./IntroPageContent.scss";
 
 const IntroPageContent: React.FC = () => {

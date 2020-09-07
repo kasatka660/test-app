@@ -1,8 +1,34 @@
-body {
-  //color: white;
+.Header {
+  background: black;
+  animation: headerSlideIn;
+  animation-duration: 3s;
+  nav {
+    display: none;
+  }
+  .Logo {
+   margin: 0 auto;
+   position: relative;
+    animation: logoSlideIn;
+    animation-duration: 3s;
+  }
 }
 
-.Header {
+
+
+
+@keyframes headerSlideIn {
+  from { height: 10px; }
+  50% {height: 10px}
+  to   { height: 100px; }
+}
+
+@keyframes logoSlideIn {
+  from { top: -150px; }
+  50% {top: -100px}
+  to   { top: 0; }
+}
+
+.HeaderWithNav {
   position: relative;
   background: white;
   height: 100px;
@@ -22,7 +48,7 @@ ul {
 }
 
 li {
-  margin-right: 28px;
+  margin-right: 54px;
   color: #707070;
   font-size: 20px;
   padding: 10px 0;
@@ -46,5 +72,13 @@ button {
   width: 100px;
   height: 100px;
   position: absolute;
+  text-align: center;
+}
+
+.apple{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 

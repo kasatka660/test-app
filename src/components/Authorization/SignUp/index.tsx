@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./SignUp.scss";
 import { Formik } from "formik";
+import ProgressIndicator from "./../../shared/ProgressIndicator";
 
 interface SignUpFormValues {
   fullName?: string;
@@ -18,6 +19,7 @@ const SignUp: React.FC = () => {
   return (
     <div className="SigUpFormWrapper">
       <div className="SignUpForm">
+        <ProgressIndicator />
         <h3 className="AuthFormTitle">Sign Up</h3>
         <Formik
           initialValues={initialValues}

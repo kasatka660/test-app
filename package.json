@@ -16,6 +16,7 @@
     "normalize.scss": "^0.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-retina-image": "^2.0.5",
     "react-scripts": "3.4.3",
     "reset-css": "^5.0.1",
     "typescript": "~3.7.2"

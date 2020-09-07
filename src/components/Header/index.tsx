@@ -1,10 +1,13 @@
 import React from "react";
 import "./Header.scss";
+import { ReactComponent as AppleLogo } from "../../assets/images/logo/Apple_Logo-small.svg";
 
-const Header: React.FC = () => {
+const Header: React.FC<{ displayNav?: boolean }> = ({ displayNav }) => {
   return (
-    <header className="Header">
-      <div className="Logo"></div>
+    <header className={displayNav ? "HeaderWithNav" : "Header"}>
+      <div className="Logo">
+        <AppleLogo className="apple" />
+      </div>
       <nav>
         <ul>
           <li>
