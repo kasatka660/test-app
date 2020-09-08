@@ -1,7 +1,6 @@
 import * as React from "react";
 import "./SignUp.scss";
 import { Formik } from "formik";
-import ProgressIndicator from "./../../shared/ProgressIndicator";
 import { Link } from "react-router-dom";
 
 interface SignUpFormValues {
@@ -20,7 +19,6 @@ const SignUp: React.FC = () => {
   return (
     <div className="SigUpFormWrapper">
       <div className="SignUpForm">
-        <ProgressIndicator />
         <h3 className="AuthFormTitle">Sign Up</h3>
         <Formik
           initialValues={initialValues}
@@ -33,11 +31,13 @@ const SignUp: React.FC = () => {
             ) {
               errors.email = "Invalid email address";
             }
+            if (!values.password) {
+              errors.password = "Required";
+            }
             return errors;
           }}
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
               setSubmitting(false);
             }, 400);
           }}
@@ -53,7 +53,7 @@ const SignUp: React.FC = () => {
           }) => (
             <form onSubmit={handleSubmit}>
               <div className="FormGroup">
-                <label htmlFor="fullName">Email</label>
+                <label htmlFor="fullName">Full Name</label>
                 <input
                   id="fullName"
                   type="fullName"
@@ -61,10 +61,10 @@ const SignUp: React.FC = () => {
                   placeholder="Jogn Doe"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.email}
+                  value={values.fullName}
                 />
-                {errors.email && touched.email && (
-                  <span className="InputError">{errors.email}</span>
+                {errors.fullName && touched.fullName && (
+                  <span className="InputError">{errors.fullName}</span>
                 )}
               </div>
               <div className="FormGroup">
@@ -102,7 +102,7 @@ const SignUp: React.FC = () => {
                 type="submit"
                 disabled={isSubmitting}
               >
-                Sign-In
+                Sign-Up
               </button>
             </form>
           )}

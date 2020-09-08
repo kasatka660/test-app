@@ -1,5 +1,6 @@
 @import "../node_modules/normalize.scss/normalize";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import "./assets/sass/variables";
 
 html {
   border: 0;
@@ -12,12 +13,10 @@ html {
 }
 body {
   margin: 0;
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: $basic-fonts;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 14px;
+  font-size: $regular;
 }
 
 code {
@@ -26,11 +25,11 @@ code {
 }
 
 h1 {
-  font-size: 79px;
+  font-size: $xx-large;
 }
 
 h3 {
-  font-size: 36px;
+  font-size: $large;
 }
 
 .TextRight {
@@ -42,51 +41,5 @@ h3 {
 }
 
 .TextStandardSize {
-  font-size: 14px;
-}
-
-.AuthFormTitle {
-  text-align: center;
-}
-
-input {
-  width: 100%;
-  box-sizing: border-box;
-  border: 1px solid #707070;
-  letter-spacing: 0;
-  padding: 16px 32px;
-}
-
-label {
-  display: block;
-  margin-bottom: 6px;
-}
-
-form {
-  margin: 0 auto;
-}
-
-.SubmitButton {
-  background: black;
-  color: white;
-  width: 174px;
-  font-size: 14px;
-  height: 54px;
-  border: none;
-  display: block;
-  margin: 14px auto;
-}
-
-.FormGroup {
-  min-height: 100px;
-}
-
-.InputError {
-  font-size: 12px;
-  color: red;
-}
-
-a {
-  color: #5AC8FA;
-  cursor: pointer;
+  font-size: $regular;
 }

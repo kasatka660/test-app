@@ -1,6 +1,9 @@
+@import "./../../../../assets/sass/variables";
+@import "./../../../../assets/sass/animations";
+
 .IntroPageContent {
   position: relative;
-  background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(90,200,250,1) 100%) no-repeat;
+  background: $background-gradient 0 0 no-repeat padding-box;
   text-align: center;
   margin: 0 100px;
   animation: pageSqueeze ease-out;
@@ -10,7 +13,7 @@
 
 .IntroPageText {
   position: absolute;
-  font-size: 25px;
+  font-size: $medium-large;
   left: 50%;
   transform: translateX(-50%);
   top: 370px;
@@ -19,9 +22,17 @@
 }
 
 .YearInfo {
-  font-size: 30px;
-  animation: odometerSlide ease-out;
+  font-size: $extra-large;
+  line-height: 68px;
+  font-weight: bold;
+  animation: odometerSlideIn ease-out;
   animation-duration: 2s;
+  .odometer-digit {
+    margin: 0 20px;
+  }
+  .odometer.odometer-auto-theme {
+    font-family: $basic-fonts
+  }
 }
 
 .AppleLogo {
@@ -30,28 +41,6 @@
   animation-duration: 2s;
 }
 
-@keyframes pageSqueeze {
-  from {margin: 0  0}
-  50% {margin: 0 0}
-  to {margin: 0 100px}
-}
 
-@keyframes logoExpansion {
-  from {width: 0; opacity: 0}
-  50% {width: 0; opacity: 0}
-  to {width: 100%; opacity: 1}
-}
-
-@keyframes textSlide {
-  from {font-size: 12px; top: 600px; opacity: 0}
-  50% {font-size: 12px; top: 600px; opacity: 0}
-  to {font-size: 25px; top: 370px}
-}
-
-@keyframes odometerSlide {
-  from {opacity: 0}
-  50% {opacity: 0}
-  to {opacity: 1}
-}
 
 

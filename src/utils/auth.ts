@@ -1,10 +1,12 @@
 const auth = {
-  isAuthenticated: true,
   authenticate() {
-    this.isAuthenticated = true;
+    localStorage.setItem("currentSession", "true");
   },
   signOut() {
-    this.isAuthenticated = false;
+    localStorage.setItem("currentSession", "false");
+  },
+  isAuthenticated() {
+    return !!localStorage.getItem("currentSession");
   },
 };
 

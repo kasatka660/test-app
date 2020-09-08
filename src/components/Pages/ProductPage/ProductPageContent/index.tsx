@@ -10,7 +10,7 @@ import { ReactComponent as AppleWatchIcon } from "../../../../assets/images/icon
 const ProductPageContent: React.FC = () => {
   return (
     <div className="ProductPageContent">
-      <div className='wrapper'>
+      <div className='PageContentWrapper'>
         <div className="ProductInfoBlock">
           <h4 className="ProductType">iPhone</h4>
           <h2 className="ProductTitle">

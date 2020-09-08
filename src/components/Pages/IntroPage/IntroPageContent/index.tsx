@@ -9,7 +9,7 @@ const IntroPageContent: React.FC = () => {
   const [odometerValue, setOdometerValue] = useState<number>(0);
   const history = useHistory();
   const goToHomePage = () => {
-    history.push("/home");
+    history.push("/");
   };
   useEffect(() => {
     setTimeout(() => setOdometerValue(2019), 1000);

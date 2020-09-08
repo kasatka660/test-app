@@ -15,6 +15,10 @@ const SignIn: React.FC = () => {
   const initialValues: SignInFormValues = { email: "", password: "" };
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  if (isSubmitted) {
+    return <Redirect to={"/intro"} />;
+  }
+
   return (
     <div className="SigInFormWrapper">
       <div className="SignInForm">
@@ -30,14 +34,15 @@ const SignIn: React.FC = () => {
             ) {
               errors.email = "Invalid email address";
             }
+            if (!values.password) {
+              errors.password = "Required";
+            }
             return errors;
           }}
           onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              auth.authenticate();
-              setIsSubmitted(true);
-              setSubmitting(false);
-            }, 400);
+            auth.authenticate();
+            setIsSubmitted(true);
+            setSubmitting(false);
           }}
         >
           {({
@@ -50,7 +55,6 @@ const SignIn: React.FC = () => {
             isSubmitting,
           }) => (
             <form onSubmit={handleSubmit}>
-              {isSubmitted && <Redirect to={"/"} />}
               <div className="FormGroup">
                 <label htmlFor="email">Email</label>
                 <input

@@ -1,0 +1,44 @@
+@import "./../../assets/sass/variables";
+
+.AuthFormTitle {
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid $border-color;
+  letter-spacing: 0;
+  padding: 16px 32px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.SubmitButton {
+  background: $main-dark-color;
+  color: $main-light-color;
+  width: 174px;
+  font-size: $regular;
+  height: 54px;
+  border: none;
+  display: block;
+  margin: 14px auto;
+}
+
+.FormGroup {
+  min-height: 100px;
+}
+
+.InputError {
+  font-size: $small;
+  color: $accent-color;
+}
+
+a {
+  text-decoration: none;
+  color: $theme-color;
+  cursor: pointer;
+}

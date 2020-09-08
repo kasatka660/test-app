@@ -7,12 +7,14 @@ const Header: React.FC<{ displayNav?: boolean }> = ({ displayNav }) => {
   return (
     <header className={displayNav ? "HeaderWithNav" : "Header"}>
       <div className="Logo">
-        <AppleLogo className="apple" />
+        <Link to="/">
+          <AppleLogo className="LogoImage" />
+        </Link>
       </div>
       <nav className="Navigation">
         <ul>
           <li className="NavItem">
-            <Link className="NavLink" to={"/home/iphone"}>
+            <Link className="NavLink" to={"/products/iphone"}>
               iPhone
             </Link>
           </li>

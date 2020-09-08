@@ -5,7 +5,6 @@ import HomePageContent from "./HomePageContent";
 const HomePage: React.FC = () => {
   return (
     <>
-      <Header displayNav={true} />
       <HomePageContent />
     </>
   );

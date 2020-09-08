@@ -1,32 +1,35 @@
+@import "./../../../../assets/sass/variables";
+@import "./../../../../assets/sass/animations";
+
 .ProductPageContent {
   margin-left: 100px;
 }
 
 .ProductInfoBlock {
-  background: transparent linear-gradient(90deg, #F2F2F2 0%, #FFFFFF00 100%) 0 0 no-repeat;
+  background: transparent $block-gradient 0 0 no-repeat;
   padding: 76px;
   margin-bottom: 50px;
 }
 
 .ProductTitle {
-  font-size: 100px;
+  font-size: $xxx-large;
   margin-top: 0;
 }
 
 .ProductType {
   font-size: 32px;
-  color: #FF3B30;
+  color: $accent-color;
 }
 
 .AdditionalText{
-  font-size: 25px;
+  font-size: $medium-large;
   line-height: 35px;
-  color: #999999;
+  color: $text-dark-color;
 }
 
 .AdditionalInfo {
-  color: #FF3B30;
-  font-size: 14px;
+  color: $accent-color;
+  font-size: $regular;
 }
 
 .PriceBlock {
@@ -43,8 +46,8 @@
 }
 
 .RedText {
-  font-size: 20px;
-  color: #FF3B30;
+  font-size: $medium;
+  color: $accent-color;
   font-weight: bold;
 }
 
@@ -53,14 +56,14 @@
 }
 
 .RedLine {
-  background: #FF3B30;
+  background: $accent-color;
   width: 100px;
   height: 9px;
   display: inline-block;
 }
 
 .WhiteLine {
-  background: #F2F2F2;
+  background: $main-light-color;
   width: 100px;
   height: 9px;
   display: inline-block;
@@ -72,7 +75,7 @@
   top: 200px;
 }
 
-.wrapper {
+.PageContentWrapper {
   display: flex;
 }
 

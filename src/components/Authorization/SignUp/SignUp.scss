@@ -1,14 +1,18 @@
+@import '../../../assets/sass/variables';
+@import  '../../../assets/sass/animations';
+@import './../Authorization';
+
 .SignUpForm {
-  box-shadow: 0 3px 6px #00000029;
-  border: 1px solid #F2F2F2;
-  background: #ffffff;
-  color: black;
+  box-shadow: 0 3px 6px $shadow-color;
+  border: 1px solid $border-light-color;
+  background: $main-light-color;
+  color: $main-dark-color;
   padding: 23px 54px 53px 54px;
 }
 
 .SigUpFormWrapper {
   width: 510px;
-  animation: slidein;
+  animation: formSlideIn;
   animation-duration: 1s;
   position: absolute;
   left: 50%;
@@ -16,14 +20,4 @@
   transform: translate(-50%, -50%);
 }
 
-@keyframes slidein {
-  from {
-    transform: translate(-50%, -30%);
-    opacity: 0;
-  }
 
-  to {
-    transform: translateY(-50%, -50%);
-    opacity: 1;
-  }
-}

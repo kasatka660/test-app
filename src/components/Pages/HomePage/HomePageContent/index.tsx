@@ -9,13 +9,13 @@ import { Link } from "react-router-dom";
 const HomePageContent: React.FC = () => {
   return (
     <div className="HomePageContent">
-      <h1>Welcome To Apple</h1>
-      <AppleLogo className="AppleLogo" />
+      <h1>Welcome to Apple</h1>
+      <AppleLogo className="AppleLogoHome" />
       <p className="HomePageText">
-        <a>See our products</a>
+        <Link to="/products/iphone">See our products</Link>
       </p>
       <div className="ProductIcons">
-        <Link to={"/home/iphone"}>
+        <Link to={"/products/iphone"}>
           <IphoneIcon />
         </Link>
         <a>
