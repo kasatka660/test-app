@@ -35,7 +35,7 @@ const SignIn: React.FC = () => {
           }}
           onSubmit={(values, { setSubmitting }) => {
             auth.authenticate();
-            history.push("/");
+            history.push("/intro");
           }}
         >
           {({

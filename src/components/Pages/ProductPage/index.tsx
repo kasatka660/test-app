@@ -7,7 +7,6 @@ import { ReactComponent as IphoneIcon } from "../../../assets/images/icons/Iphon
 import { ReactComponent as MacIcon } from "../../../assets/images/icons/Mac_Icon.svg";
 import { ReactComponent as AppleWatchIcon } from "../../../assets/images/icons/Apple_Watch_Icon.svg";
 
-
 const ProductPageContent: React.FC = () => {
   return (
     <div className="ProductPage">
@@ -21,7 +20,7 @@ const ProductPageContent: React.FC = () => {
             The future is here. Join the iPhone Upgrade <br /> Program to get the
             latest iPhone - NOW!
           </p>
-          <span className="AdditionalInfo">Starts shipping MM-DD-YYYY</span>
+          <span className="AdditionalInfo">Starts shipping 2020/02/21</span>
         </div>
 
         <div className='ProductBlock'>

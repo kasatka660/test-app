@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import SignUp from "../../Authorization/SignUp";
 
 const SignUpPage: React.FC = () => {

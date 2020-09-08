@@ -18,12 +18,12 @@ const HomePage: React.FC = () => {
         <Link to={"/products/iphone"}>
           <IphoneIcon />
         </Link>
-        <a>
+        <Link to="/">
           <MacIcon />
-        </a>
-        <a>
+        </Link>
+        <Link to="/">
           <AppleWatchIcon />
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-const sessionTime = 30000;
+const sessionTime = 300000;
 
 const auth = {
   authenticate() {
