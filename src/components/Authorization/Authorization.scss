@@ -21,7 +21,7 @@ label {
   background: $main-dark-color;
   color: $main-light-color;
   width: 174px;
-  font-size: $regular;
+  font-size: $regular-size;
   height: 54px;
   border: none;
   display: block;
@@ -33,7 +33,7 @@ label {
 }
 
 .InputError {
-  font-size: $small;
+  font-size: $small-size;
   color: $accent-color;
 }
 

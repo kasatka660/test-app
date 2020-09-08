@@ -16,7 +16,7 @@ body {
   font-family: $basic-fonts;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: $regular;
+  font-size: $regular-size;
 }
 
 code {
@@ -25,11 +25,11 @@ code {
 }
 
 h1 {
-  font-size: $xx-large;
+  font-size: $xx-large-size;
 }
 
 h3 {
-  font-size: $large;
+  font-size: $large-size;
 }
 
 .TextRight {
@@ -41,5 +41,5 @@ h3 {
 }
 
 .TextStandardSize {
-  font-size: $regular;
+  font-size: $regular-size;
 }

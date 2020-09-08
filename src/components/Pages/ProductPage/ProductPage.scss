@@ -1,0 +1,106 @@
+@import "./../../../assets/sass/variables";
+@import "./../../../assets/sass/animations";
+
+.ProductPage {
+  margin-left: 100px;
+}
+
+.ProductInfoBlock {
+  background: transparent $block-gradient 0 0 no-repeat;
+  padding: 84px 76px;
+  margin-bottom: 50px;
+}
+
+.PageContentWrapper {
+  display: flex;
+}
+
+.ProductTitle {
+  font-size: $xxx-large-size;
+  margin: 15px 0 42px;
+  line-height: 110px;
+}
+
+.ProductType {
+  font-size: 32px;
+  color: $accent-color;
+  margin: 0;
+  line-height: 48px;
+}
+
+.AdditionalText{
+  font-size: $medium-large-size;
+  line-height: 35px;
+  color: $text-dark-color;
+  margin: 0 0 20px;
+}
+
+.AdditionalInfo {
+  color: $accent-color;
+  font-size: $regular-size;
+  font-weight: $regular;
+}
+
+.PriceBlock {
+  padding: 76px 116px 76px 80px;
+  display: inline-block;
+  margin-right: 355px;
+}
+
+.ProductPrice {
+  font-size: 50px;
+  font-weight: bold;
+  color: #CCCCCC;
+  margin: 0;
+}
+
+.RedText {
+  font-size: $medium-size;
+  color: $accent-color;
+  font-weight: bold;
+}
+
+.ProductOptions {
+  display: inline-block;
+  img:first-child {
+    margin-right: 42px;
+  }
+}
+
+.OptionsSwitcher {
+  text-align: center;
+  cursor: pointer;
+}
+
+.LeftIndicator {
+  background: $accent-color;
+  width: 100px;
+  height: 9px;
+  display: inline-block;
+}
+
+.RightIndicator {
+  background: $border-light-color;
+  width: 100px;
+  height: 9px;
+  display: inline-block;
+}
+
+.ProductBlock {
+  position: absolute;
+  right: 280px;
+  top: 200px;
+}
+
+
+.ProductSwitcherBlock {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 54px;
+  text-align: center;
+  top: 50%;
+  a {
+    margin-bottom: 36px;
+  }
+}

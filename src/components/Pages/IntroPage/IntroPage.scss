@@ -1,7 +1,7 @@
-@import "./../../../../assets/sass/variables";
-@import "./../../../../assets/sass/animations";
+@import "./../../../assets/sass/variables";
+@import "./../../../assets/sass/animations";
 
-.IntroPageContent {
+.IntroPage {
   position: relative;
   background: $background-gradient 0 0 no-repeat padding-box;
   text-align: center;
@@ -13,7 +13,7 @@
 
 .IntroPageText {
   position: absolute;
-  font-size: $medium-large;
+  font-size: $medium-large-size;
   left: 50%;
   transform: translateX(-50%);
   top: 370px;
@@ -22,7 +22,7 @@
 }
 
 .YearInfo {
-  font-size: $extra-large;
+  font-size: $extra-large-size;
   line-height: 68px;
   font-weight: bold;
   animation: odometerSlideIn ease-out;

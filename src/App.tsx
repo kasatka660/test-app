@@ -36,7 +36,7 @@ const App: React.FC = () => {
                 <Route path="/intro">
                   <RequireLogin>
                     <Header displayNav={false} />
-                    <div className="content-wrapper">
+                    <div className="ContentWrapper">
                       <IntroPage />
                     </div>
                   </RequireLogin>
@@ -44,7 +44,7 @@ const App: React.FC = () => {
                 <Route path="/products/iphone">
                   <RequireLogin>
                     <Header displayNav={true} />
-                    <div className="content-wrapper">
+                    <div className="ContentWrapper">
                       <ProductPage />
                     </div>
                   </RequireLogin>
@@ -52,7 +52,7 @@ const App: React.FC = () => {
                 <Route exact path="/">
                   <RequireLogin>
                     <Header displayNav={true} />
-                    <div className="content-wrapper">
+                    <div className="ContentWrapper">
                       <HomePage />
                     </div>
                   </RequireLogin>

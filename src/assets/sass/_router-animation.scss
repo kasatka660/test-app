@@ -1,22 +1,22 @@
 .fade-enter {
-  .content-wrapper {
+  .ContentWrapper {
     opacity: 0;
   }
 }
 .fade-enter-active {
-  .content-wrapper {
+  .ContentWrapper {
     opacity: 1;
     transform: translateX(0);
     transition: opacity 500ms, transform 500ms;
   }
 }
 .fade-exit {
-  .content-wrapper {
+  .ContentWrapper {
     opacity: 1;
   }
 }
 .fade-exit-active {
-  .content-wrapper {
+  .ContentWrapper {
     opacity: 0;
     transition: opacity 500ms, transform 500ms;
   }
