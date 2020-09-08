@@ -26,10 +26,10 @@
 
 .Navigation {
   padding: 10px 87px 10px 0;
-  transition: opacity 1s ease-out;
+  overflow: hidden;
   @media screen and (max-width: 768px) {
     &.hidden {
-      opacity: 0;
+      display: none;
     }
   }
   ul {
@@ -38,14 +38,20 @@
     justify-content: flex-end;
     @media screen and (max-width: 768px) {
       display: block;
+      margin:0;
+      padding: 10px;
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $medium-screen) {
+    padding: 0;
     position: relative;
     width: 100%;
     top: 100px;
     background: $main-dark-color;
     z-index: 10;
+  }
+  @media screen and (max-width: $large-screen) {
+    padding-right: 20px;
   }
 }
 
@@ -84,14 +90,14 @@
   transform: translate(-50%, -50%);
 }
 
-.toogle {
+.Toggle {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
-  .toogle {
+@media screen and (max-width: $medium-screen) {
+  .Toggle {
     display: block;
-    curor: pointer;
+    cursor: pointer;
     width: 40px;
     position: absolute;
     right: 10px;

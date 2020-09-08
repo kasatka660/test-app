@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProductPage.scss";
 import IphoneImage from "../../../assets/images/iphone/Iphone 1.png";
+import IphoneBackImage from "../../../assets/images/iphone/apple-iphonexs-max-gold-back-2.png";
 import IphoneSmall from "../../../assets/images/iphone/apple-iphonexs-max-gold.png";
 import IphoneBackSmall from "../../../assets/images/iphone/apple-iphonexs-max-gold-back-1.png";
 import { ReactComponent as IphoneIcon } from "../../../assets/images/icons/Iphone_Icon.svg";
@@ -8,6 +9,15 @@ import { ReactComponent as MacIcon } from "../../../assets/images/icons/Mac_Icon
 import { ReactComponent as AppleWatchIcon } from "../../../assets/images/icons/Apple_Watch_Icon.svg";
 
 const ProductPageContent: React.FC = () => {
+  const [currentPosition, setCurrentPosition] = useState<number>(0);
+
+  const switchClick = () => {
+    if (currentPosition > 50) {
+      setCurrentPosition(0);
+    } else {
+      setCurrentPosition(100);
+    }
+  }
   return (
     <div className="ProductPage">
       <div className='PageContentWrapper'>
@@ -24,7 +34,8 @@ const ProductPageContent: React.FC = () => {
         </div>
 
         <div className='ProductBlock'>
-          <img src={IphoneImage}/>
+          <img src={IphoneImage} onClick={switchClick} alt='iphone' className={ currentPosition < 100 ? 'hidden' : ''}/>
+          <img src={IphoneImage} onClick={switchClick} alt='iphone back' className={currentPosition === 100 ? 'hidden' : ''}/>
         </div>
         <div className='ProductSwitcherBlock'>
           <a>
@@ -45,11 +56,11 @@ const ProductPageContent: React.FC = () => {
         <a className="RedText">Buy now ></a>
       </div>
       <div className='ProductOptions'>
-        <img src={IphoneSmall}/>
-        <img src={IphoneBackSmall}/>
+        <img src={IphoneSmall} className="ProductOptionImage" style={{opacity: currentPosition < 100 ? 1 : 0.5}} onClick={switchClick} alt='iphone small'/>
+        <img src={IphoneBackSmall} className="ProductOptionImage" style={{opacity: currentPosition === 100 ? 1 : 0.5}} onClick={switchClick} alt='phone back small'/>
         <div className="OptionsSwitcher">
-          <div className='LeftIndicator'></div>
-          <div className='RightIndicator'></div>
+          <div className='IndicatorBase' onClick={switchClick}/>
+          <div className='Indicator' style={{left: Math.round(currentPosition / 2) + '%'}}/>
         </div>
       </div>
 

@@ -12,14 +12,16 @@ const Header: React.FC<{ displayNav?: boolean }> = ({ displayNav }) => {
           <AppleLogo className="LogoImage" />
         </Link>
       </div>
-      <span
-        className={"toogle" + (isOpen ? " open" : "")}
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <hr />
-        <hr />
-        <hr />
-      </span>
+      {displayNav && (
+        <span
+          className={"Toggle" + (isOpen ? " open" : "")}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <hr />
+          <hr />
+          <hr />
+        </span>
+      )}
       <nav className={"Navigation" + (!isOpen ? " hidden" : "")}>
         <ul>
           <li className="NavItem">

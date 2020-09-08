@@ -53,32 +53,43 @@
 .OptionsSwitcher {
   text-align: center;
   cursor: pointer;
+  position: relative;
+  width: 200px;
+  margin: 10px auto;
 }
 
-.LeftIndicator {
+.IndicatorBase {
+  background: $border-light-color;
+  width: 200px;
+  height: 9px;
+  display: block;
+}
+
+.Indicator {
   background: $accent-color;
   width: 100px;
   height: 9px;
-  display: inline-block;
-}
-
-.RightIndicator {
-  background: $border-light-color;
-  width: 100px;
-  height: 9px;
-  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: left .5s;
 }
 
 .PriceBlock {
   display: inline-block;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $medium-screen) {
   .ProductSwitcherBlock {
     position: absolute;
     right: 54px;
     top: 50%;
     flex-direction: column;
+    display: flex;
+    text-align: center;
+    a {
+      margin-bottom: 36px;
+    }
   }
 
   .PageContentWrapper {
@@ -88,6 +99,7 @@
 
   .ProductPage {
     margin-left: 100px;
+    overflow: hidden;
   }
 
   .ProductInfoBlock {
@@ -101,14 +113,6 @@
     line-height: 110px;
   }
 
-  .ProductSwitcherBlock {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    a {
-      margin-bottom: 36px;
-    }
-  }
   .PriceBlock {
     padding: 76px 66px 76px 80px;
     margin-right: 355px;
@@ -118,10 +122,30 @@
     padding-top:50px;
   }
 
+  .ProductOptionImage {
+    transition: opacity .5s;
+  }
+
+}
+@media screen and (min-width: $large-screen) {
+  .ProductBlock {
+    width: 300px;
+    max-width: 300px;
+    position: relative;
+    img {
+      max-width: 100%;
+      position: absolute;
+      transition: transform .5s ease-in, opacity .5s ease-in;
+
+      &.hidden {
+        transform: translateX(400px);
+        opacity: 0;
+      }
+    }
+  }
 }
 
-
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: $extra-large-screen) {
   .ProductBlock {
     position: absolute;
     right: 250px;
@@ -129,19 +153,29 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: $small-screen) {
   .ProductBlock {
     img {
       max-width: 200px;
     }
   }
+}
+
+@media screen and (max-width: $medium-screen) {
   .ProductSwitcherBlock {
-    display: flex;
+    display: none;
     flex-direction: row;
     text-align: center;
     a {
       margin: 20px;
     }
   }
+}
 
+@media screen and (max-width: $large-screen) {
+  .ProductBlock {
+    .hidden {
+      display: none;
+    }
+  }
 }

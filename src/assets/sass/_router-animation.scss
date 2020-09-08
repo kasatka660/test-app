@@ -1,34 +1,45 @@
-.fade-enter {
-  opacity: 0;
-  transition: opacity 1.5s;
-}
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 1.5s;
-}
-.fade-exit {
-  opacity: 1;
-  transition: opacity 1.5s;
-}
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 1.5s;
+@import './variables';
+
+@media screen and (max-width: $medium-screen) {
+  .fade-enter, .slidedown-enter {
+    display: none;
+  }
 }
 
-.slidedown-enter {
-  transform: translateY(-100%);
-  transition: transform 1s ease-in;
-}
+@media screen and (min-width: $medium-screen) {
+  .fade-enter {
+    opacity: 0;
+    transition: opacity 1.5s;
+  }
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 1.5s;
+  }
+  .fade-exit {
+    opacity: 1;
+    transition: opacity 1.5s;
+  }
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 1.5s;
+  }
 
-.slidedown-enter-active {
-  transform: translateY(0);
-}
+  .slidedown-enter {
+    transform: translateY(-100%);
+    transition: transform 1s ease-in;
+  }
 
-.slidedown-exit {
-  opacity: 1;
-  transition: opacity 1.5s;
-}
+  .slidedown-enter-active {
+    transform: translateY(0);
+  }
 
-.slidedown-exit-active {
-  opacity: 0;
+  .slidedown-exit {
+    opacity: 1;
+    transition: opacity 1.5s;
+  }
+
+  .slidedown-exit-active {
+    opacity: 0;
+  }
+
 }

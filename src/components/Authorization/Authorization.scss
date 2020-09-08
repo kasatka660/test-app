@@ -42,3 +42,34 @@ a {
   color: $theme-color;
   cursor: pointer;
 }
+
+.AuthForm {
+  box-shadow: 0 3px 6px $shadow-color;
+  border: 1px solid $border-light-color;
+  background: $main-light-color;
+  color: $main-dark-color;
+  padding: 23px 54px 53px 54px;
+}
+
+.AuthFormWrapper {
+  width: 510px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: $small-screen) {
+  .AuthForm {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: $small-screen) {
+  .AuthFormWrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: formSlideIn;
+    animation-duration: 1s;
+  }
+}
+

@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./SignUp.scss";
+import "./../Authorization.scss";
 import { Formik } from "formik";
 import { Link, useHistory } from "react-router-dom";
 import auth from "../../../utils/auth";
@@ -20,8 +20,8 @@ const SignUp: React.FC = () => {
   };
 
   return (
-    <div className="SigUpFormWrapper">
-      <div className="SignUpForm">
+    <div className="AuthFormWrapper">
+      <div className="AuthForm">
         <h3 className="AuthFormTitle">Sign Up</h3>
         <Formik
           initialValues={initialValues}
