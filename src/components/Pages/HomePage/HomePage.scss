@@ -4,20 +4,16 @@
 .HomePage {
   background: transparent $block-gradient 0 0 no-repeat padding-box;
   text-align: center;
-  margin: 0 100px;
   position: relative;
   a {
     font-size: $medium-size;
     font-weight: $medium-bold;
   }
   h1 {
-    position: absolute;
+    font-size: $large-size;
     text-align: center;
     font-weight: bold;
     width: 100%;
-    top: 300px;
-    animation: titleSlideDown ease-out;
-    animation-duration: 2s;
   }
 }
 
@@ -28,16 +24,39 @@
 }
 
 .ProductIcons {
-  margin: 138px 0 100px;
+  margin: 20px 0;
   display: inline-block;
   a {
     margin: 0 25px;
-    animation: iconsShrink ease-out;
-    animation-duration: 2s;
   }
 }
 
-.AppleLogoHome {
-  margin-top: 196px
+@media screen and (min-width: 768px) {
+  .HomePage {
+    margin: 0 100px;
+  }
+  h1 {
+    position: absolute;
+    top: 300px;
+    animation: titleSlideDown ease-out;
+    animation-duration: 2s;
+    font-size: $xx-large-size;
+  }
+  .AppleLogoHome {
+    margin-top: 196px
+  }
+  .ProductIcons {
+    margin: 138px 0 100px;
+    a {
+      animation: iconsShrink ease-out;
+      animation-duration: 2s;
+    }
+  }
 }
 
+@media screen and (max-width: 480px) {
+  .ProductIcons {
+
+
+  }
+}

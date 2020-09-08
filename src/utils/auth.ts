@@ -1,12 +1,20 @@
+const sessionTime = 30000;
+
 const auth = {
   authenticate() {
-    localStorage.setItem("currentSession", "true");
+    const date = new Date();
+    localStorage.setItem(
+      "currentSession",
+      (date.getTime() + sessionTime).toString()
+    );
   },
   signOut() {
     localStorage.setItem("currentSession", "false");
   },
   isAuthenticated() {
-    return !!localStorage.getItem("currentSession");
+    const date = new Date();
+    const storageDate = parseInt(localStorage.getItem("currentSession") || "");
+    return date.getTime() < storageDate;
   },
 };
 

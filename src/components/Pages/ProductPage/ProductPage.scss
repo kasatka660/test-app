@@ -1,24 +1,13 @@
 @import "./../../../assets/sass/variables";
 @import "./../../../assets/sass/animations";
 
-.ProductPage {
-  margin-left: 100px;
-}
 
 .ProductInfoBlock {
   background: transparent $block-gradient 0 0 no-repeat;
-  padding: 84px 76px;
-  margin-bottom: 50px;
-}
-
-.PageContentWrapper {
-  display: flex;
 }
 
 .ProductTitle {
-  font-size: $xxx-large-size;
-  margin: 15px 0 42px;
-  line-height: 110px;
+  font-size: $large-size;
 }
 
 .ProductType {
@@ -39,12 +28,6 @@
   color: $accent-color;
   font-size: $regular-size;
   font-weight: $regular;
-}
-
-.PriceBlock {
-  padding: 76px 116px 76px 80px;
-  display: inline-block;
-  margin-right: 355px;
 }
 
 .ProductPrice {
@@ -86,21 +69,79 @@
   display: inline-block;
 }
 
-.ProductBlock {
-  position: absolute;
-  right: 280px;
-  top: 200px;
+.PriceBlock {
+  display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  .ProductSwitcherBlock {
+    position: absolute;
+    right: 54px;
+    top: 50%;
+    flex-direction: column;
+  }
+
+  .PageContentWrapper {
+    display: flex;
+    position: relative;
+  }
+
+  .ProductPage {
+    margin-left: 100px;
+  }
+
+  .ProductInfoBlock {
+    padding: 84px 76px;
+    margin-bottom: 50px;
+  }
+
+  .ProductTitle {
+    font-size: $xxx-large-size;
+    margin: 15px 0 42px;
+    line-height: 110px;
+  }
+
+  .ProductSwitcherBlock {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    a {
+      margin-bottom: 36px;
+    }
+  }
+  .PriceBlock {
+    padding: 76px 66px 76px 80px;
+    margin-right: 355px;
+  }
+
+  .ProductOptions {
+    padding-top:50px;
+  }
+
 }
 
 
-.ProductSwitcherBlock {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  right: 54px;
-  text-align: center;
-  top: 50%;
-  a {
-    margin-bottom: 36px;
+@media screen and (min-width: 1900px) {
+  .ProductBlock {
+    position: absolute;
+    right: 250px;
+    top: 98px;
   }
+}
+
+@media screen and (max-width: 480px) {
+  .ProductBlock {
+    img {
+      max-width: 200px;
+    }
+  }
+  .ProductSwitcherBlock {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    a {
+      margin: 20px;
+    }
+  }
+
 }

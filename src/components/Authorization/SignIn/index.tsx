@@ -1,10 +1,8 @@
 import * as React from "react";
 import "./SignIn.scss";
 import { Formik } from "formik";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import auth from "../../../utils/auth";
-import { useState } from "react";
-import { Redirect } from "react-router-dom";
 
 interface SignInFormValues {
   email?: string;
@@ -12,12 +10,8 @@ interface SignInFormValues {
 }
 
 const SignIn: React.FC = () => {
+  const history = useHistory();
   const initialValues: SignInFormValues = { email: "", password: "" };
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  if (isSubmitted) {
-    return <Redirect to={"/intro"} />;
-  }
 
   return (
     <div className="SigInFormWrapper">
@@ -41,8 +35,7 @@ const SignIn: React.FC = () => {
           }}
           onSubmit={(values, { setSubmitting }) => {
             auth.authenticate();
-            setIsSubmitted(true);
-            setSubmitting(false);
+            history.push("/");
           }}
         >
           {({

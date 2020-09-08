@@ -6,41 +6,60 @@
   background: $background-gradient 0 0 no-repeat padding-box;
   text-align: center;
   margin: 0 100px;
-  animation: pageSqueeze ease-out;
-  animation-duration: 2s;
   cursor: pointer;
 }
 
 .IntroPageText {
-  position: absolute;
   font-size: $medium-large-size;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 370px;
-  animation: textSlide ease-out;
-  animation-duration: 2s;
 }
 
 .YearInfo {
-  font-size: $extra-large-size;
-  line-height: 68px;
+  font-size: $large-size;
   font-weight: bold;
-  animation: odometerSlideIn ease-out;
-  animation-duration: 2s;
-  .odometer-digit {
-    margin: 0 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .IntroPage {
+    margin: 0;
   }
-  .odometer.odometer-auto-theme {
-    font-family: $basic-fonts
+  .AppleLogo {
+    margin-top: 20px;
   }
 }
 
-.AppleLogo {
-  margin-top: 196px;
-  animation: logoExpansion ease-out;
-  animation-duration: 2s;
-}
+@media screen and (min-width: 768px) {
+  .IntroPage {
+    animation: pageSqueeze ease-out;
+    animation-duration: 2s;
+  }
+  .YearInfo {
+    font-size: $extra-large-size;
+    line-height: 68px;
+    animation: odometerSlideIn ease-out;
+    animation-duration: 2s;
+    .odometer-digit {
+      margin: 0 20px;
+    }
+    .odometer.odometer-auto-theme {
+      font-family: $basic-fonts
+    }
+  }
+  .IntroPageText {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 370px;
+    animation: textSlide ease-out;
+    animation-duration: 2s;
+  }
 
+  .AppleLogo {
+    margin-top: 196px;
+    animation: logoExpansion ease-out;
+    animation-duration: 2s;
+  }
+
+}
 
 
 

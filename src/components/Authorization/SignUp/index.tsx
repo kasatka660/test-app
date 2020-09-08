@@ -1,7 +1,8 @@
 import * as React from "react";
 import "./SignUp.scss";
 import { Formik } from "formik";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import auth from "../../../utils/auth";
 
 interface SignUpFormValues {
   fullName?: string;
@@ -10,6 +11,8 @@ interface SignUpFormValues {
 }
 
 const SignUp: React.FC = () => {
+  const history = useHistory();
+
   const initialValues: SignUpFormValues = {
     fullName: "",
     email: "",
@@ -37,9 +40,8 @@ const SignUp: React.FC = () => {
             return errors;
           }}
           onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              setSubmitting(false);
-            }, 400);
+            auth.authenticate();
+            history.push("/");
           }}
         >
           {({

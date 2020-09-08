@@ -9,8 +9,8 @@
     display: none;
   }
   .Logo {
-   margin: 0 auto;
-   position: relative;
+    margin: 0 auto;
+    position: relative;
     animation: logoSlideIn;
     animation-duration: 2s;
   }
@@ -24,10 +24,26 @@
 
 .Navigation {
   padding: 10px 87px 10px 0;
+  transition: opacity 1s ease-out;
+  @media screen and (max-width: 768px) {
+    &.hidden {
+      opacity: 0;
+    }
+  }
   ul {
     list-style: none;
     display: flex;
     justify-content: flex-end;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    position: relative;
+    width: 100%;
+    top: 100px;
+    background: $main-dark-color;
+    z-index: 10;
   }
 }
 
@@ -66,4 +82,23 @@
   transform: translate(-50%, -50%);
 }
 
+.toogle {
+  display: none;
+}
 
+@media screen and (max-width: 768px) {
+  .toogle {
+    display: block;
+    curor: pointer;
+    width: 40px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+
+    hr {
+      background: $main-dark-color;
+      margin-top: 2px;
+      height: 2px;
+    }
+  }
+}

@@ -12,12 +12,23 @@
 
 .SigUpFormWrapper {
   width: 510px;
-  animation: formSlideIn;
-  animation-duration: 1s;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  max-width: 100%;
 }
 
+@media screen and (max-width: 480px) {
+  .SignUpForm {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .SigUpFormWrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: formSlideIn;
+    animation-duration: 1s;
+  }
+}
 

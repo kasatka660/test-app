@@ -1,23 +1,27 @@
 .fade-enter {
-  .ContentWrapper {
+  //.ContentWrapper {
     opacity: 0;
-  }
+  transition: opacity 1.5s;
+  transition-delay: 1s;
+  //}
 }
 .fade-enter-active {
-  .ContentWrapper {
+  //.ContentWrapper {
     opacity: 1;
-    transform: translateX(0);
-    transition: opacity 500ms, transform 500ms;
-  }
+    transition: opacity 1.5s;
+  transition-delay: 1s;
+  //}
 }
 .fade-exit {
-  .ContentWrapper {
+  //.ContentWrapper {
     opacity: 1;
-  }
+    transition: opacity 1.5s;
+
+  //}
 }
 .fade-exit-active {
-  .ContentWrapper {
+  //.ContentWrapper {
     opacity: 0;
-    transition: opacity 500ms, transform 500ms;
-  }
+    transition: opacity 1.5s;
+  //}
 }

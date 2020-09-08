@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.scss";
 import { ReactComponent as AppleLogo } from "../../assets/images/logo/Apple_Logo-small.svg";
 import { Link } from "react-router-dom";
 
 const Header: React.FC<{ displayNav?: boolean }> = ({ displayNav }) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <header className={displayNav ? "HeaderWithNav" : "Header"}>
       <div className="Logo">
@@ -11,7 +12,15 @@ const Header: React.FC<{ displayNav?: boolean }> = ({ displayNav }) => {
           <AppleLogo className="LogoImage" />
         </Link>
       </div>
-      <nav className="Navigation">
+      <span
+        className={"toogle" + (isOpen ? " open" : "")}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <hr />
+        <hr />
+        <hr />
+      </span>
+      <nav className={"Navigation" + (!isOpen ? " hidden" : "")}>
         <ul>
           <li className="NavItem">
             <Link className="NavLink" to={"/products/iphone"}>

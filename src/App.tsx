@@ -17,50 +17,66 @@ const App: React.FC = () => {
   return (
     <>
       <TransitionGroup className="transition-group">
-        <CSSTransition key={location.key} timeout={1200} classNames={"fade"}>
-          <>
-            <Switch location={location}>
-              <Route exact path="/signin">
-                <div className="AppGradientWrapper">
-                  <SignInPage />
-                </div>
-              </Route>
-              <Route exact path="/signup">
-                <div className="AppGradientWrapper">
-                  <SignUpPage />
-                </div>
-              </Route>
-            </Switch>
-            <div className="transition-wrapper">
-              <Switch>
-                <Route path="/intro">
-                  <RequireLogin>
-                    <Header displayNav={false} />
+        <>
+          <Switch location={location}>
+            <Route exact path="/signin">
+              <div className="AppGradientWrapper">
+                <SignInPage />
+              </div>
+            </Route>
+            <Route exact path="/signup">
+              <div className="AppGradientWrapper">
+                <SignUpPage />
+              </div>
+            </Route>
+          </Switch>
+          <div className="TransitionWrapper">
+            <Switch>
+              <Route path="/intro">
+                <RequireLogin>
+                  <Header displayNav={false} />
+                  <CSSTransition
+                    key={location.key}
+                    timeout={1500}
+                    classNames={"fade"}
+                  >
                     <div className="ContentWrapper">
                       <IntroPage />
                     </div>
-                  </RequireLogin>
-                </Route>
-                <Route path="/products/iphone">
-                  <RequireLogin>
-                    <Header displayNav={true} />
+                  </CSSTransition>
+                </RequireLogin>
+              </Route>
+              <Route path="/products/iphone">
+                <RequireLogin>
+                  <Header displayNav={true} />
+                  <CSSTransition
+                    key={location.key}
+                    timeout={1500}
+                    classNames={"fade"}
+                  >
                     <div className="ContentWrapper">
                       <ProductPage />
                     </div>
-                  </RequireLogin>
-                </Route>
-                <Route exact path="/">
-                  <RequireLogin>
-                    <Header displayNav={true} />
+                  </CSSTransition>
+                </RequireLogin>
+              </Route>
+              <Route exact path="/">
+                <RequireLogin>
+                  <Header displayNav={true} />
+                  <CSSTransition
+                    key={location.key}
+                    timeout={1500}
+                    classNames={"fade"}
+                  >
                     <div className="ContentWrapper">
                       <HomePage />
                     </div>
-                  </RequireLogin>
-                </Route>
-              </Switch>
-            </div>
-          </>
-        </CSSTransition>
+                  </CSSTransition>
+                </RequireLogin>
+              </Route>
+            </Switch>
+          </div>
+        </>
       </TransitionGroup>
     </>
   );
