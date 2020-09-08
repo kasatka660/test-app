@@ -30,13 +30,19 @@ const Header: React.FC<{ displayNav?: boolean }> = ({ displayNav }) => {
             </Link>
           </li>
           <li className="NavItem">
-            <a className="NavLink">MacBook Pro</a>
+            <a href="/" className="NavLink">
+              MacBook Pro
+            </a>
           </li>
           <li className="NavItem">
-            <a className="NavLink">Watch</a>
+            <a href="/" className="NavLink">
+              Watch
+            </a>
           </li>
           <li className="NavItem NavBtn">
-            <a className="NavLink">Notify me</a>
+            <a href="/" className="NavLink">
+              Notify me
+            </a>
           </li>
         </ul>
       </nav>
