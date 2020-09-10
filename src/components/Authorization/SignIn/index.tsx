@@ -3,6 +3,7 @@ import "./../Authorization.scss";
 import { Formik } from "formik";
 import { Link, useHistory } from "react-router-dom";
 import auth from "../../../utils/auth";
+import { useState } from "react";
 
 interface SignInFormValues {
   email?: string;
@@ -11,6 +12,7 @@ interface SignInFormValues {
 
 const SignIn: React.FC = () => {
   const history = useHistory();
+  const [submitButtonActive, setButtonToActive] = useState<boolean>(false);
   const initialValues: SignInFormValues = { email: "", password: "" };
 
   return (
@@ -31,7 +33,11 @@ const SignIn: React.FC = () => {
             if (!values.password) {
               errors.password = "Required";
             }
-            return errors;
+            if (!!Object.values(errors).length) {
+              return errors;
+            } else {
+              setButtonToActive(true);
+            }
           }}
           onSubmit={(values, { setSubmitting }) => {
             auth.authenticate();
@@ -81,7 +87,7 @@ const SignIn: React.FC = () => {
               <button
                 className="SubmitButton"
                 type="submit"
-                disabled={isSubmitting}
+                disabled={isSubmitting || !submitButtonActive}
               >
                 Sign-In
               </button>

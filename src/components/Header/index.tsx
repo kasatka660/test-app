@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Header.scss";
 import { ReactComponent as AppleLogo } from "../../assets/images/logo/Apple_Logo-small.svg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header: React.FC<{ displayNav?: boolean }> = ({ displayNav }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -25,9 +25,13 @@ const Header: React.FC<{ displayNav?: boolean }> = ({ displayNav }) => {
       <nav className={"Navigation" + (!isOpen ? " hidden" : "")}>
         <ul>
           <li className="NavItem">
-            <Link className="NavLink" to={"/products/iphone"}>
+            <NavLink
+              className="NavLink"
+              to={"/products/iphone"}
+              activeClassName="NavLinkActive"
+            >
               iPhone
-            </Link>
+            </NavLink>
           </li>
           <li className="NavItem">
             <a href="/" className="NavLink">

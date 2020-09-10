@@ -2,9 +2,12 @@
 @import  '../../../assets/sass/animations';
 
 .HomePage {
-  background: transparent $block-gradient 0 0 no-repeat padding-box;
+  background:  transparent $block-gradient 0 0 no-repeat padding-box;
   text-align: center;
   position: relative;
+  @media screen and (min-width: $medium-screen) {
+      margin: 0 100px;
+  }
   a {
     font-size: $medium-size;
     font-weight: $medium-bold;
@@ -12,45 +15,55 @@
   h1 {
     font-size: $large-size;
     text-align: center;
-    font-weight: bold;
+    font-weight: $bold;
     width: 100%;
+    position: absolute;
+    top: 240px;
+    @media screen and (max-width: $medium-screen) {
+      margin: 0;
+    }
+    @media screen and (min-width: $medium-screen) {
+      top: 330px;
+      animation: titleSlideDown ease-out;
+      animation-duration: 2s;
+      font-size: 55px;
+    }
+    @media screen and (min-width: $large-screen) {
+      font-size: $xx-large-size;
+      top: 300px;
+    }
   }
+
+  .ProductIcons {
+    flex-direction: row;
+    @media screen and (min-width: $large-screen) {
+      margin: 138px 0 100px;
+    }
+    a {
+      margin: 0 25px;
+      @media screen and (min-width: $large-screen) {
+        animation: iconsShrink ease-out;
+        animation-duration: 2s;
+      }
+    }
+  }
+
 }
 
 .HomePageText {
   margin-top: 60px;
   animation: textSlideUp ease-out;
   animation-duration: 2s;
-}
-
-.ProductIcons {
-  margin: 20px 0;
-  display: inline-block;
-  a {
-    margin: 0 25px;
+  @media screen and (max-width: $medium-screen) {
+    margin-top: 20px;
   }
 }
 
-@media screen and (min-width: $medium-screen) {
-  .HomePage {
-    margin: 0 100px;
-  }
-  h1 {
-    position: absolute;
-    top: 300px;
-    animation: titleSlideDown ease-out;
-    animation-duration: 2s;
-    font-size: $xx-large-size;
-  }
-  .AppleLogoHome {
+.AppleLogoHome {
+  margin-top: 40px;
+  opacity: 0.2;
+  @media screen and (min-width: $medium-screen) {
     margin-top: 196px
-  }
-  .ProductIcons {
-    margin: 138px 0 100px;
-    a {
-      animation: iconsShrink ease-out;
-      animation-duration: 2s;
-    }
   }
 }
 

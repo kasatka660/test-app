@@ -3,6 +3,7 @@ import "./../Authorization.scss";
 import { Formik } from "formik";
 import { Link, useHistory } from "react-router-dom";
 import auth from "../../../utils/auth";
+import { useState } from "react";
 
 interface SignUpFormValues {
   fullName?: string;
@@ -12,6 +13,7 @@ interface SignUpFormValues {
 
 const SignUp: React.FC = () => {
   const history = useHistory();
+  const [submitButtonActive, setButtonToActive] = useState<boolean>(false);
 
   const initialValues: SignUpFormValues = {
     fullName: "",
@@ -37,7 +39,11 @@ const SignUp: React.FC = () => {
             if (!values.password) {
               errors.password = "Required";
             }
-            return errors;
+            if (!!Object.values(errors).length) {
+              return errors;
+            } else {
+              setButtonToActive(true);
+            }
           }}
           onSubmit={(values, { setSubmitting }) => {
             auth.authenticate();
@@ -102,7 +108,7 @@ const SignUp: React.FC = () => {
               <button
                 className="SubmitButton"
                 type="submit"
-                disabled={isSubmitting}
+                disabled={isSubmitting || !submitButtonActive}
               >
                 Sign-Up
               </button>

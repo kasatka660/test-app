@@ -1,0 +1,16 @@
+@import '../../../assets/sass/variables';
+@import  '../../../assets/sass/animations';
+
+
+.ProductIcons {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.IconActive {
+  svg path {
+    fill:  $border-color;
+  }
+}

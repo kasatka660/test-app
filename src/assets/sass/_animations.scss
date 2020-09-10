@@ -1,67 +1,158 @@
-@keyframes formSlideIn {
-  from {
-    transform: translate(-50%, -10%);
-    opacity: 0;
+@import './variables';
+
+@media screen and (min-width: $medium-screen) {
+
+  @keyframes formSlideIn {
+    from {
+      transform: translate(-50%, -10%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(-50%, -50%);
+      opacity: 1;
+    }
   }
 
-  to {
-    transform: translateY(-50%, -50%);
-    opacity: 1;
+  @keyframes headerExpansion {
+    from {
+      height: 10px;
+    }
+    50% {
+      height: 10px
+    }
+    to {
+      height: 100px;
+    }
   }
+
+  @keyframes logoSlideIn {
+    from {
+      top: -150px;
+    }
+    50% {
+      top: -100px
+    }
+    to {
+      top: 0;
+    }
+  }
+
+  @keyframes pageSqueeze {
+    from {
+      margin: 0 0
+    }
+    50% {
+      margin: 0 0
+    }
+    to {
+      margin: 0 100px
+    }
+  }
+
+  @keyframes logoExpansion {
+    from {
+      width: 0;
+      opacity: 0
+    }
+    50% {
+      width: 0;
+      opacity: 0
+    }
+    to {
+      width: 100%;
+      opacity: 1
+    }
+  }
+
+  @keyframes textSlide {
+    from {
+      font-size: 12px;
+      top: 600px;
+      opacity: 0
+    }
+    50% {
+      font-size: 12px;
+      top: 600px;
+      opacity: 0
+    }
+    to {
+      font-size: 25px;
+      top: 370px
+    }
+  }
+
+  @keyframes odometerSlideIn {
+    from {
+      opacity: 0
+    }
+    50% {
+      opacity: 0
+    }
+    to {
+      opacity: 1
+    }
+  }
+
+  @keyframes titleSlideDown {
+    from {
+      top: 100px;
+      opacity: 0
+    }
+    50% {
+      top: 100px;
+      opacity: 0
+    }
+    to {
+      @media screen and (max-width: $large-screen)   {
+        top: 330px
+      }
+      top: 300px
+    }
+  }
+
+  @keyframes textSlideUp {
+    from {
+      transform: translateY(-60px);
+      opacity: 0
+    }
+    50% {
+      transform: translateY(-60px);
+      opacity: 0
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes iconsShrink {
+    from {
+      margin: 0 50px;
+      opacity: 0
+    }
+    50% {
+      margin: 0 50px;
+      opacity: 0
+    }
+    to {
+      margin: 0 25px;
+    }
+  }
+
+  @keyframes iconsShrinkVertical {
+    from {
+      margin: 40px 0;
+      opacity: 0
+    }
+    50% {
+      margin: 40px 0;
+      opacity: 0
+    }
+    to {
+      margin: 18px 0;
+    }
+  }
+
+
+
 }
-
-@keyframes headerExpansion {
-  from { height: 10px; }
-  50% {height: 10px}
-  to   { height: 100px; }
-}
-
-@keyframes logoSlideIn {
-  from { top: -150px; }
-  50% {top: -100px}
-  to   { top: 0; }
-}
-
-@keyframes pageSqueeze {
-  from {margin: 0  0}
-  50% {margin: 0 0}
-  to {margin: 0 100px}
-}
-
-@keyframes logoExpansion {
-  from {width: 0; opacity: 0}
-  50% {width: 0; opacity: 0}
-  to {width: 100%; opacity: 1}
-}
-
-@keyframes textSlide {
-  from {font-size: 12px; top: 600px; opacity: 0}
-  50% {font-size: 12px; top: 600px; opacity: 0}
-  to {font-size: 25px; top: 370px}
-}
-
-@keyframes odometerSlideIn {
-  from {opacity: 0}
-  50% {opacity: 0}
-  to {opacity: 1}
-}
-
-@keyframes titleSlideDown {
-  from {top: 100px; opacity: 0}
-  50% {top: 100px; opacity: 0}
-  to {top: 300px}
-}
-
-@keyframes textSlideUp {
-  from {transform: translateY(-60px); opacity: 0}
-  50% {transform: translateY(-60px); opacity: 0}
-  to {transform: translateY(0);}
-}
-
-@keyframes iconsShrink {
-  from { margin: 0 50px; opacity: 0}
-  50% { margin: 0 50px; opacity: 0}
-  to { margin: 0 25px;}
-}
-
-

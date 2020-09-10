@@ -3,20 +3,12 @@ import "./ProductPage.scss";
 import IphoneImage from "../../../assets/images/iphone/Iphone 1.png";
 import IphoneSmall from "../../../assets/images/iphone/apple-iphonexs-max-gold.png";
 import IphoneBackSmall from "../../../assets/images/iphone/apple-iphonexs-max-gold-back-1.png";
-import { ReactComponent as IphoneIcon } from "../../../assets/images/icons/Iphone_Icon.svg";
-import { ReactComponent as MacIcon } from "../../../assets/images/icons/Mac_Icon.svg";
-import { ReactComponent as AppleWatchIcon } from "../../../assets/images/icons/Apple_Watch_Icon.svg";
+import ProductIcons from "../../common/ProductIcons";
 
 const ProductPageContent: React.FC = () => {
   const [currentPosition, setCurrentPosition] = useState<number>(0);
-
-  const switchClick = () => {
-    if (currentPosition > 50) {
-      setCurrentPosition(0);
-    } else {
-      setCurrentPosition(100);
-    }
-  };
+  const switchClick = () =>
+    currentPosition > 50 ? setCurrentPosition(0) : setCurrentPosition(100);
   return (
     <div className="ProductPage">
       <div className="PageContentWrapper">
@@ -29,7 +21,7 @@ const ProductPageContent: React.FC = () => {
             The future is here. Join the iPhone Upgrade <br /> Program to get
             the latest iPhone - NOW!
           </p>
-          <span className="AdditionalInfo">Starts shipping 2020/02/21</span>
+          <span className="ShippingInfo">Starts shipping 2020/02/21</span>
         </div>
 
         <div className="ProductBlock">
@@ -46,23 +38,14 @@ const ProductPageContent: React.FC = () => {
             className={currentPosition === 100 ? "hidden" : ""}
           />
         </div>
-        <div className="ProductSwitcherBlock">
-          <a href="/">
-            <IphoneIcon />
-          </a>
-          <a href="/">
-            <MacIcon />
-          </a>
-          <a href="/">
-            <AppleWatchIcon />
-          </a>
+        <div className="ProductIconsWrapper">
+          <ProductIcons />
         </div>
       </div>
-
       <div className="PriceBlock">
         <h5 className="ProductPrice">From $699</h5>
-        <a className="RedText" href="/">
-          Buy now
+        <a className="PurchaseInfoLink" href="/">
+          {"Buy now >"}
         </a>
       </div>
       <div className="ProductOptions">

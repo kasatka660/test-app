@@ -27,7 +27,7 @@
 .Navigation {
   padding: 10px 87px 10px 0;
   overflow: hidden;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $medium-screen) {
     &.hidden {
       display: none;
     }
@@ -36,7 +36,7 @@
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $medium-screen) {
       display: block;
       margin:0;
       padding: 10px;
@@ -63,6 +63,11 @@
 
 .NavLink {
   color: $border-color;
+}
+
+.NavLinkActive {
+  color: $main-dark-color;
+  font-weight: $bold;
 }
 
 .NavBtn {

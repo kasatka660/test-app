@@ -26,6 +26,12 @@ label {
   border: none;
   display: block;
   margin: 14px auto;
+  transition: background-color 1s;
+}
+
+.SubmitButton:disabled {
+  background: $text-dark-color;
+  opacity: 0.3;
 }
 
 .FormGroup {
@@ -49,21 +55,16 @@ a {
   background: $main-light-color;
   color: $main-dark-color;
   padding: 23px 54px 53px 54px;
+  @media screen and (max-width: $small-screen) {
+    padding: 10px;
+  }
 }
 
 .AuthFormWrapper {
   width: 510px;
   max-width: 100%;
-}
 
-@media screen and (max-width: $small-screen) {
-  .AuthForm {
-    padding: 10px;
-  }
-}
-
-@media screen and (min-width: $small-screen) {
-  .AuthFormWrapper {
+  @media screen and (min-width: $small-screen) {
     position: absolute;
     left: 50%;
     top: 50%;
