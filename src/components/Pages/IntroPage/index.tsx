@@ -19,7 +19,6 @@ const IntroPage: React.FC = () => {
       <AppleLogo className="AppleLogo" />
       <p className="IntroPageText">New Products Coming This Summer</p>
       <h2 className="YearInfo">
-        {" "}
         <Odometer value={odometerValue} format="d" />
       </h2>
     </div>

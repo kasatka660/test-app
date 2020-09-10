@@ -22,6 +22,27 @@
   background: $main-light-color;
   height: 100px;
   z-index: 100;
+  @media screen and (max-width: $medium-screen) {
+    &.ColoredHeader {
+      background-color: $main-dark-color;
+      .Toggle {
+        hr {
+          background-color: $main-light-color;
+        }
+      }
+      .NavLinkActive {
+        color: $main-light-color
+      }
+      .NavItem {
+        margin-right: 0;
+      }
+      .NavBtn {
+        width: 100px;
+        margin: 0 auto;
+      }
+
+    }
+  }
 }
 
 .Navigation {
@@ -40,6 +61,7 @@
       display: block;
       margin:0;
       padding: 10px;
+      text-align: center;
     }
   }
   @media screen and (max-width: $medium-screen) {
@@ -59,6 +81,9 @@
   margin-right: 54px;
   padding: 10px 0;
   font-size: $medium-size;
+  @media screen and (max-width: $large-screen) {
+    margin-right: 40px;
+  }
 }
 
 .NavLink {
@@ -103,11 +128,10 @@
   .Toggle {
     display: block;
     cursor: pointer;
-    width: 40px;
+    width: 60px;
     position: absolute;
-    right: 10px;
-    top: 20px;
-
+    right: 20px;
+    top: 32px;
     hr {
       background: $main-dark-color;
       margin-top: 2px;

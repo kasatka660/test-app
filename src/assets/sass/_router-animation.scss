@@ -1,8 +1,11 @@
 @import './variables';
 
 @media screen and (max-width: $medium-screen) {
-  .fade-enter, .slidedown-enter {
+ .fade-exit-active, .fade-exit  {
     display: none;
+  }
+  .fade-enter, .slidedown-enter, {
+    display: block;
   }
 }
 

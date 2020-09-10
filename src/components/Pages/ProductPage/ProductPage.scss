@@ -1,14 +1,12 @@
 @import "./../../../assets/sass/variables";
 @import "./../../../assets/sass/animations";
 
-.ProductPage {
-  background: url('../../../assets/images/logo/Apple Logo Light Gray.png') no-repeat 42% 100px, transparent $block-gradient 0 0 no-repeat;
-}
-
 .ProductInfoBlock {
   @media screen and (max-width: $medium-screen) {
     padding-left: 20px;
   }
+  background: url('../../../assets/images/logo/Apple Logo Light Gray.png') no-repeat right 90px, transparent $block-gradient 0 0 no-repeat;
+  flex: 0 0 35%;
 }
 
 .ProductTitle {

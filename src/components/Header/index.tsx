@@ -6,7 +6,12 @@ import { Link, NavLink } from "react-router-dom";
 const Header: React.FC<{ displayNav?: boolean }> = ({ displayNav }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <header className={displayNav ? "HeaderWithNav" : "Header"}>
+    <header
+      className={
+        (displayNav ? "HeaderWithNav" : "Header") +
+        (isOpen ? " ColoredHeader" : "")
+      }
+    >
       <div className="Logo">
         <Link to="/">
           <AppleLogo className="LogoImage" />
